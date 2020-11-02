@@ -3,9 +3,8 @@ const colors = require('colors/safe');
 const config = require('./config');
 
 const database = async ()=>{
-    const DATABASE = config.URL_MONGO ;
     try {
-        await mongoose.connect(DATABASE,{
+        await mongoose.connect(config.URL_MONGO,{
             useNewUrlParser: true,
             useUnifiedTopology: true,
             useCreateIndex: true,

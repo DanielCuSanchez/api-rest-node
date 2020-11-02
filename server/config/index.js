@@ -1,16 +1,16 @@
 //Modo config
-const modo = process.env.MODO || 'DEV';
+const MODO = process.env.MODO || 'DEV';
 const config = {
     DEV:{
         PORT: process.env.PORT || 3000,
         URL_MONGO: 'mongodb://localhost:27017/cafe'
     },
     PRODUCTION:{
-        PORT: process.env.PORT || 3000,
-        URL_MONGO: process.env.URL_MONGO
+        PORT: process.env.PORT,
+        URL_MONGO: process.env.MONGO_DB
     }
 }
-module.exports = config[modo];
+module.exports = config[MODO];
 
 
 

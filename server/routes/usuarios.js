@@ -7,7 +7,10 @@ const Usuario = require('../models/Usuarios');
 const usuarios = Router();
 
 usuarios.get('/', (req, res) =>{
-    res.send('Servidor corriendo....');
+    res.json({
+        ok: true,
+        msg: 'Servidor corriendo'
+    });
 })
 
 usuarios.get("/usuarios", (req, res) => {
